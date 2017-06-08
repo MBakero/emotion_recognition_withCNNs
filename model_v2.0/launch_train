@@ -1,0 +1,79 @@
+#Brands
+
+python retrain.py \
+--bottleneck_dir=tf_files/brands/bottlenecks \
+--how_many_training_steps 4000 \
+--model_dir=tf_files/inception \
+--output_graph=tf_files/brands_model/retrained_graph.pb \
+--output_labels=tf_files/brands_model/retrained_labels.txt \
+--summaries_dir=tf_files/tensorboard/brands_logs \
+--image_dir tf_files/data/brands
+
+
+
+#Emotions
+
+python retrain.py \
+--bottleneck_dir=tf_files/emotions/bottlenecks \
+--how_many_training_steps 15000 \
+--model_dir=tf_files/inception \
+--output_graph=tf_files/emotions_model/retrained_graph.pb \
+--output_labels=tf_files/emotions_model/retrained_labels.txt \
+--summaries_dir=tf_files/tensorboard/emotions_logs \
+--image_dir /home/bakero/Documents/Data/New_Datasets/cropped_emotions
+
+#basic ops
+--flip_left_right True \
+--random_crop 5 \
+--random_brightness 10
+#Operations
+
+--flip_left_right
+    default=False,
+    help="""\
+       Whether to randomly flip half of the training images horizontally.\
+       """,
+
+--random_crop
+    type=int,
+    default=0,
+    help="""\
+       A percentage determining how much of a margin to randomly crop off the
+       training images.\
+       """
+
+--random_brightness
+    type=int,
+    default=0,
+    help="""\
+        A percentage determining how much to randomly multiply the training image
+        input pixels up or down by.\
+        """
+
+#Others
+
+--learning_rate
+    type=float,
+    default=0.01,
+
+--train_batch_size
+    type=int,
+    default=100,
+
+--validation_batch_size
+    type=int,
+    default=100,
+
+--summaries_dir
+
+--testing_percentage
+    type=int,
+    default=10,
+
+--validation_percentage
+    type=int,
+    default=10,
+
+--eval_step_interval
+    type=int,
+    default=10,

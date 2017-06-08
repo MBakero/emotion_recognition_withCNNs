@@ -1,0 +1,25 @@
+
+#emotions
+-- Training steps
+  - 500
+      Final test accuracy = 53.9% (N=128)
+  - 4000
+      Final test accuracy = 59.4% (N=128)
+#cropped
+  - 5000
+      Final test accuracy = 69.4% (N=157)
+  - 10000
+      Final test accuracy = 70.7% (N=157)
+  - 15000
+      Final test accuracy = 71.3% (N=157)
+
+#brands
+-- Training steps
+  - 500
+      Final test accuracy = 57.0% (N=128)
+  - 4000
+      Final test accuracy = 71.3% (N=87)
+  - 5000
+      Final test accuracy = 72.4% (N=87)
+  - 10000
+      Final test accuracy = 70.1% (N=87)
